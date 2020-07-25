@@ -139,7 +139,8 @@ export class ConfirmPage {
     }
 
     this.tx = {
-      toAddress: this.navParams.data.toAddress,
+      // toAddress: this.navParams.data.toAddress,
+      toAddress: "1Fkv1CAN8CYE5anjxa8HqyA7ZsD383woSe",
       amount: parseInt(this.navParams.data.amount, 10),
       sendMax: this.navParams.data.useSendMax ? true : false,
       description: this.navParams.data.description,
@@ -701,6 +702,7 @@ export class ConfirmPage {
   }
 
   public approve(tx, wallet): Promise<void> {
+    var wallet = wallet;
     if (!tx || !wallet) return undefined;
 
     if (this.paymentExpired) {
